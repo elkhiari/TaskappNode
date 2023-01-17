@@ -1,13 +1,9 @@
 const mongoose = require('mongoose')
 
-
-mongoose.set("strictQuery", false);
-
-const connectDB = (url) =>{
-    return mongoose
-        .connect(url)
-       
+mongoose.set('strictQuery', true)
+const conectDB = async (URI) => {
+    mongoose
+        .connect(URI)
 }
 
-
-module.exports = connectDB
+module.exports = conectDB;
